@@ -1,0 +1,39 @@
+{
+  "name": "fastapi-crawl-vue",
+  "version": "0.1.1",
+  "private": true,
+  "scripts": {
+    "dev": "npm run serve",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "ansi-to-html": "^0.6.14",
+    "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
+    "echarts": "^4.9.0",
+    "element-ui": "^2.11.0",
+    "font-awesome": "^4.7.0",
+    "mavon-editor": "^2.6.17",
+    "npm-font-open-sans": "^1.1.0",
+    "vue": "^2.6.10",
+    "vue-cookie": "^1.1.4",
+    "vue-cropperjs": "^3.0.0",
+    "vue-i18n": "^8.10.0",
+    "vue-json-excel": "^0.3.0",
+    "vue-quill-editor": "^3.0.6",
+    "vue-router": "^3.0.3",
+    "vue-schart": "^2.0.0",
+    "vue-virtual-scroll-list": "^2.3.2",
+    "vue-wordcloud": "^1.1.1",
+    "vuedraggable": "^2.17.0",
+    "vuex": "^3.6.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.9.0",
+    "@vue/cli-service": "^3.9.0",
+    "echarts-wordcloud": "^1.1.3",
+    "sass-loader": "^10.0.2",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
