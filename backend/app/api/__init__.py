@@ -18,13 +18,13 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.middleware.sessions import SessionMiddleware
 from starlette.websockets import WebSocket, WebSocketDisconnect
 
-from app.api.apiV1.core.spiderLog.saveLog import query_task_log
-from app.api.apiV1.router.ws.view import notifier
+from app.api.api_v1.core.spider_log.save_log import query_task_log
+from app.api.api_v1.router.ws.view import notifier
 from app.api.db.mongoDB import db, get_database
 from app.api.db.session import database, __initMasterHost, get_db
 from app.config import settings
-from .apiV1.api import api_v1_router
-from .apiV1.core.spiderStatus.getStatus import getSpiderStatus
+from .api_v1.api import api_v1_router
+from .api_v1.core.spider_status.get_status import get_spider_status
 from .db.mongoCurd import do_info
 from .db.redisDB import RedisCore
 from .logger import logger
@@ -140,7 +140,7 @@ def register_ws(app: FastAPI):
         try:
 
             while 1:
-                taskStatusInfo = getSpiderStatus(taskId)
+                taskStatusInfo = get_spider_status(taskId)
                 print(f"目前抓取状态: {taskStatusInfo}")
 
                 # 如果已经运行完成，查询一次数据库日志

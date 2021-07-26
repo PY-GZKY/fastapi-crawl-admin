@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from app.api.apiV1.router.auth.schemas import role as role_schemas, user as user_schemas
-from app.api.apiV1.router.auth.crud import curd_user, curd_role
+from app.api.api_v1.router.auth.schemas import role as role_schemas, user as user_schemas
+from app.api.api_v1.router.auth.crud import curd_user, curd_role
 from app.config import settings
 
 

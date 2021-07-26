@@ -3,8 +3,8 @@ from typing import Any, Optional, Union
 import jwt
 from fastapi import Depends, Header
 from sqlalchemy.orm import Session
-from app.api.apiV1.router.auth import crud
-from app.api.apiV1.router.auth import schemas
+from app.api.api_v1.router.auth import crud
+from app.api.api_v1.router.auth import schemas
 from app.api.db.session import get_db
 from app.api.models.auth import AdminUser
 from app.api.utils import customExc

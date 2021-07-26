@@ -71,7 +71,7 @@ class Settings(BaseSettings):
     # 缓存 key 一周后过期
     REDIS_CACHE_KEY = "fastapi_cache:"
     HOST_DETAIL_KEY = "host_detail:"
-    HOST_CACHE_EXPIRE = 60  # 60 * 60 * 24 * 7
+    HOST_CACHE_EXPIRE =  60 * 60 * 24 * 7
 
     # Redis配置项
     REDIS_USERNAME: str = os.getenv("REDIS_USERNAME", None)
@@ -98,8 +98,8 @@ class Settings(BaseSettings):
 
     #  MYSQL配置项
     MYSQL_USERNAME: str = os.getenv("MYSQL_USERNAME", "root")
-    MYSQL_PASSWORD: str = os.getenv("MYSQL_PASSWORD", ".*?ok123")
-    MYSQL_HOST: str = os.getenv("MYSQL_HOST", "159.75.96.72")
+    MYSQL_PASSWORD: str = os.getenv("MYSQL_PASSWORD", "")
+    MYSQL_HOST: str = os.getenv("MYSQL_HOST", "")
     MYSQL_PORT: int = os.getenv("MYSQL_PORT", 3306)
     MYSQL_DATABASE: str = os.getenv("MYSQL_DATABASE", "crawlAdmin")
 

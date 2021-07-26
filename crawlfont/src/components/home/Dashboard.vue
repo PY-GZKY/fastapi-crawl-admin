@@ -181,7 +181,7 @@
             <el-row class="buttonClass">
               <span>
                 <el-button type="primary" size="mini" plain
-                  >正在运行任务：3</el-button
+                  >正在运行任务：{{taskParams.length}}</el-button
                 >
                 <el-button type="primary" size="mini" plain
                   >历史运行任务：16</el-button
@@ -289,6 +289,7 @@ import Schart from "vue-schart";
 import vChart from "../eCharts/BaseCharts";
 import bus from "../common/bus";
 import {
+  taskIndex,
   systemParams,
   redisParams,
   mongoParams,
@@ -309,6 +310,7 @@ export default {
       projectCount: null,
       taskCount: null,
       hostCount: null,
+      taskParams: [],
       systemParams: {},
       redisParams: {},
       mongoParams: {},
@@ -451,7 +453,7 @@ export default {
 
     loadSystemParams() {
       systemParams().then((res) => {
-        console.log(res);
+        // console.log(res);
         this.systemParams = res.data.data;
       });
 
@@ -463,6 +465,11 @@ export default {
       mongoParams().then((res) => {
         // console.log(res);
         this.mongoParams = res.data.data;
+      });
+
+      taskIndex({status:0}).then((res) => {
+        // console.log(res.data.data);
+        this.taskParams = res.data.data;
       });
     },
 
